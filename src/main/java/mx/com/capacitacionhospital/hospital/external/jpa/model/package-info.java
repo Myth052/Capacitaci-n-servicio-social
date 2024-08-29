@@ -1,1 +1,0 @@
-package mx.com.capacitacionhospital.hospital.external.jpa.model;
