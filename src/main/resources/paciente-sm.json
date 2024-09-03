@@ -1,0 +1,72 @@
+{
+  "id": "Paciente",
+  "name": "paciente",
+  "states": [
+    {
+      "id": 1,
+      "name": "registrado"
+    },
+    {
+      "id": 2,
+      "name": "activo"
+    },
+    {
+      "id": 3,
+      "name": "inactivo"
+    }
+  ],
+  "actions": [
+    {
+      "id": 1,
+      "name": "activar"
+    },
+    {
+      "id": 2,
+      "name": "eliminar"
+    },
+    {
+      "id": 3,
+      "name": "agendar cita"
+    },
+    {
+      "id": 4,
+      "name": "cancelar cita"
+    }
+  ],
+  "operations": [
+    {
+      "idState": 1,
+      "idAction": 1
+    },
+    {
+      "idState": 2,
+      "idAction": 2
+    },
+    {
+      "idState": 2,
+      "idAction": 3
+    },
+    {
+      "idState": 2,
+      "idAction": 4
+    },
+    {
+      "idState": 3,
+      "idAction": 1
+    }
+  ],
+  "transitions": [
+    {
+      "origin": 1,
+      "destination": 2
+    },
+    {
+      "origin": 2,
+      "destination": 3
+    },
+    {
+      "origin": 3,
+      "destination": 2
+    }
+  ]
+}

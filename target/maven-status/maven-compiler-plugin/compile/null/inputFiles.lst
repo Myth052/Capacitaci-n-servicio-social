@@ -1,25 +1,62 @@
-/home/wargreymon/workspace-git/capacitacion/capacitacion-backend/Proyecto final/hospital-api/src/main/java/mx/com/capacitacionhospital/util/statemachine/Operation.java
-/home/wargreymon/workspace-git/capacitacion/capacitacion-backend/Proyecto final/hospital-api/src/main/java/mx/com/capacitacionhospital/util/statemachine/StateMachine.java
-/home/wargreymon/workspace-git/capacitacion/capacitacion-backend/Proyecto final/hospital-api/src/main/java/mx/com/capacitacionhospital/hospital/core/entity/Hospital.java
-/home/wargreymon/workspace-git/capacitacion/capacitacion-backend/Proyecto final/hospital-api/src/main/java/mx/com/capacitacionhospital/util/error/handler/CustomIlegalParameterExceptionMapper.java
-/home/wargreymon/workspace-git/capacitacion/capacitacion-backend/Proyecto final/hospital-api/src/main/java/mx/com/capacitacionhospital/hospital/external/rest/controller/HospitalController.java
-/home/wargreymon/workspace-git/capacitacion/capacitacion-backend/Proyecto final/hospital-api/src/main/java/mx/com/capacitacionhospital/hospital/core/business/output/HospitalRepository.java
-/home/wargreymon/workspace-git/capacitacion/capacitacion-backend/Proyecto final/hospital-api/src/main/java/mx/com/capacitacionhospital/util/error/ErrorInfoGlobalMapper.java
-/home/wargreymon/workspace-git/capacitacion/capacitacion-backend/Proyecto final/hospital-api/src/main/java/mx/com/capacitacionhospital/util/enums/Numbers.java
-/home/wargreymon/workspace-git/capacitacion/capacitacion-backend/Proyecto final/hospital-api/src/main/java/mx/com/capacitacionhospital/util/statemachine/StateMachineLoader.java
-/home/wargreymon/workspace-git/capacitacion/capacitacion-backend/Proyecto final/hospital-api/src/main/java/mx/com/capacitacionhospital/util/statemachine/Action.java
-/home/wargreymon/workspace-git/capacitacion/capacitacion-backend/Proyecto final/hospital-api/src/main/java/mx/com/capacitacionhospital/util/error/ErrorInfoData.java
-/home/wargreymon/workspace-git/capacitacion/capacitacion-backend/Proyecto final/hospital-api/src/main/java/mx/com/capacitacionhospital/util/enums/ErrorType.java
-/home/wargreymon/workspace-git/capacitacion/capacitacion-backend/Proyecto final/hospital-api/src/main/java/mx/com/capacitacionhospital/util/error/handler/CustomPersistenceExceptionMapper.java
-/home/wargreymon/workspace-git/capacitacion/capacitacion-backend/Proyecto final/hospital-api/src/main/java/mx/com/capacitacionhospital/util/statemachine/State.java
-/home/wargreymon/workspace-git/capacitacion/capacitacion-backend/Proyecto final/hospital-api/src/main/java/mx/com/capacitacionhospital/hospital/core/business/input/HospitalService.java
-/home/wargreymon/workspace-git/capacitacion/capacitacion-backend/Proyecto final/hospital-api/src/main/java/mx/com/capacitacionhospital/util/error/handler/CustomValidationExceptionMapper.java
-/home/wargreymon/workspace-git/capacitacion/capacitacion-backend/Proyecto final/hospital-api/src/main/java/mx/com/capacitacionhospital/util/error/ErrorInfo.java
-/home/wargreymon/workspace-git/capacitacion/capacitacion-backend/Proyecto final/hospital-api/src/main/java/mx/com/capacitacionhospital/hospital/external/rest/dto/HospitalDto.java
-/home/wargreymon/workspace-git/capacitacion/capacitacion-backend/Proyecto final/hospital-api/src/main/java/mx/com/capacitacionhospital/hospital/external/jpa/model/HospitalJpa.java
-/home/wargreymon/workspace-git/capacitacion/capacitacion-backend/Proyecto final/hospital-api/src/main/java/mx/com/capacitacionhospital/util/statemachine/CustomStateMachine.java
-/home/wargreymon/workspace-git/capacitacion/capacitacion-backend/Proyecto final/hospital-api/src/main/java/mx/com/capacitacionhospital/util/statemachine/Transition.java
-/home/wargreymon/workspace-git/capacitacion/capacitacion-backend/Proyecto final/hospital-api/src/main/java/mx/com/capacitacionhospital/hospital/core/business/implementation/HospitalBs.java
-/home/wargreymon/workspace-git/capacitacion/capacitacion-backend/Proyecto final/hospital-api/src/main/java/mx/com/capacitacionhospital/hospital/external/jpa/repository/HospitalJpaRepository.java
-/home/wargreymon/workspace-git/capacitacion/capacitacion-backend/Proyecto final/hospital-api/src/main/java/mx/com/capacitacionhospital/hospital/external/jpa/dao/HospitalDao.java
-/home/wargreymon/workspace-git/capacitacion/capacitacion-backend/Proyecto final/hospital-api/src/main/java/mx/com/capacitacionhospital/util/error/handler/CustomInvalidFormatExceptionMapper.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/util/StringConstants.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/paciente/external/jpa/model/EstadoCitaJpa.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/paciente/core/business/implementation/PacienteBs.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/hospital/external/jpa/model/HospitalMedicoJpa.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/medico/external/rest/controller/package-info.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/medico/core/business/input/package-info.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/hospital/external/rest/dto/package-info.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/hospital/external/jpa/model/HospitalJpa.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/util/error/ErrorCodeException.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/paciente/core/statemachine/PacienteSM.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/hospital/external/rest/controller/package-info.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/paciente/core/business/output/PacienteRepository.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/hospital/core/entity/HospitalMedico.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/util/error/ErrorCodeExceptionMapper.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/util/statemachine/Action.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/paciente/external/jpa/dao/PacienteDao.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/paciente/core/business/output/package-info.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/medico/external/jpa/model/MedicoJpa.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/paciente/external/rest/dto/PacienteDto.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/util/statemachine/CustomStateMachine.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/hospital/external/jpa/dao/package-info.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/hospital/core/business/implementation/package-info.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/medico/core/entity/package-info.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/medico/core/entity/Medico.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/util/statemachine/Transition.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/paciente/core/business/implementation/package-info.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/hospital/core/business/input/package-info.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/medico/core/business/output/package-info.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/paciente/external/rest/dto/package-info.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/util/statemachine/Operation.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/util/enums/Numbers.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/util/error/ErrorType.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/util/statemachine/StateMachineLoader.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/util/statemachine/StateMachine.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/medico/external/jpa/repository/package-info.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/hospital/core/business/output/package-info.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/util/error/ConstraintViolationExceptionMapper.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/medico/core/business/implementation/package-info.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/util/error/ErrorDetailDto.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/paciente/core/entity/package-info.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/paciente/external/jpa/repository/PacienteJpaRepository.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/paciente/external/rest/controller/package-info.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/paciente/core/business/input/PacienteService.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/util/error/ErrorResponseDto.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/util/error/ErrorCodesEnum.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/paciente/external/jpa/repository/package-info.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/hospital/external/jpa/repository/package-info.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/paciente/external/rest/dto/PacientePersistDto.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/medico/external/jpa/dao/package-info.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/paciente/external/jpa/dao/package-info.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/medico/external/rest/dto/package-info.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/util/error/ErrorMapper.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/paciente/external/rest/controller/GestionPacientesController.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/util/DateUtils.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/util/statemachine/State.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/paciente/core/business/input/package-info.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/hospital/external/jpa/model/HospitalMedicoIdJpa.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/hospital/core/entity/Paciente.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/paciente/external/jpa/model/PacienteJpa.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/util/error/PersistenceExceptionMapper.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/paciente/external/jpa/model/CitaJpa.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/paciente/core/entity/Paciente.java

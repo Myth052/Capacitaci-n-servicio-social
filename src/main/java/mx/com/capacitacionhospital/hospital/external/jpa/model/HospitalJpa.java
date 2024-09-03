@@ -19,6 +19,6 @@ public class HospitalJpa {
     private Integer id;
     @Column(name = "tx_nombre")
     private String nombre;
-    @Column(name = "st_activa")
-    private Boolean activo;
+    @Column(name = "fk_id_estado")
+    private Integer idEstado;
 }
