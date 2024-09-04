@@ -44,6 +44,7 @@
 /home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/util/error/ErrorResponseDto.java
 /home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/util/error/ErrorCodesEnum.java
 /home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/paciente/external/jpa/repository/package-info.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/medico/external/rest/controller/GestionMedicosController.java
 /home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/hospital/external/jpa/repository/package-info.java
 /home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/paciente/external/rest/dto/PacientePersistDto.java
 /home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/medico/external/jpa/dao/package-info.java

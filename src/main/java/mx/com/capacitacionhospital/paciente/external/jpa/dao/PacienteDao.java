@@ -45,4 +45,8 @@ public class PacienteDao implements PacienteRepository {
     public boolean existsById(Integer idPaciente) {
         return pacienteJpaRepository.existsById(idPaciente);
     }
+
+    public Optional<Paciente> findByNombre(String nombre) {
+        return pacienteJpaRepository.findByNombre(nombre).map(PacienteJpa::toEntity);
+    }
 }

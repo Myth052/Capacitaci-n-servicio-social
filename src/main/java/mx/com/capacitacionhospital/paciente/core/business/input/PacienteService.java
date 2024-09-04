@@ -11,7 +11,7 @@ import java.util.List;
 
 
 public interface PacienteService {
-    Either<ErrorCodesEnum, Paciente> editarPaciente(Integer idPaciente, Paciente entity);
+    Either<ErrorCodesEnum, Boolean> editarPaciente(Integer idPaciente, Paciente entity);
 
     Either<ErrorCodesEnum, Boolean> eliminarPaciente(Integer idPaciente);
 }

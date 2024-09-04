@@ -35,9 +35,8 @@ public class GestionPacientesController {
     @Operation(operationId = "updatePaciente", description = "Actualiza la información del paciente")
     public Response updatePaciente(@PathParam("idPaciente") Integer idPaciente, @Valid PacientePersistDto pacientePersistDto) {
         return pacienteService.editarPaciente(idPaciente, pacientePersistDto.toEntity())
-                .map(PacienteDto::fromEntity).map(Response::ok)
-                .getOrElseGet(ErrorMapper::errorCodeToResponseBuilder)
-                .build();
+                .map(success -> Response.ok(success).build())
+                .getOrElseGet(errorCode -> ErrorMapper.errorCodeToResponseBuilder(errorCode).build());
     }
 
 

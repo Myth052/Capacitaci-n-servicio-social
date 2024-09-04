@@ -11,8 +11,6 @@ import java.util.Optional;
 
 public interface PacienteJpaRepository extends JpaRepository<PacienteJpa, Integer> {
 
-//    @Query("SELECT p FROM PacienteJpa p WHERE p.id = :id")
-//    Optional<PacienteJpa> findByIdPaciente(@Param("id") Integer id);
-
     boolean existsById(Integer idPaciente);
+    Optional<PacienteJpa> findByNombre(String nombre);
 }

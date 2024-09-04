@@ -14,6 +14,7 @@ public enum ErrorCodesEnum {
     RNN002("Paciente no encontrado"),
     RNN003("Entrada invalida de datos"),
     RNN004("El paciente tiene una cita"),
+    RNN005("Nombre de paciente duplicado"),
     ERROR("Error inesperado"),
     /**
      * Errores NO asociados a una regla de negocio

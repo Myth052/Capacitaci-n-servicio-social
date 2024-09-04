@@ -14,6 +14,8 @@ public interface PacienteRepository {
 
     Paciente update(Paciente paciente);
 
+    Optional<Paciente> findByNombre(String nombre);
+
     void delete(Integer idPaciente);
 
     boolean existsById(Integer idPaciente);

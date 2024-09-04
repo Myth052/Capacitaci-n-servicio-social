@@ -21,23 +21,27 @@ public class PacienteBs implements PacienteService {
     PacienteRepository pacienteRepository;
 
     @Override
-    public Either<ErrorCodesEnum, Paciente> editarPaciente(Integer idPaciente, Paciente entity) {
-        Either<ErrorCodesEnum, Paciente> result = Either.left(ErrorCodesEnum.NOT_FOUND);
+    public Either<ErrorCodesEnum, Boolean> editarPaciente(Integer idPaciente, Paciente entity) {
         var existsPaciente = pacienteRepository.findById(idPaciente);
 
         if (existsPaciente.isPresent()) {
             var pacienteActualizar = existsPaciente.get();
+            var pacienteConMismoNombre = pacienteRepository.findByNombre(entity.getNombre());
+            if (pacienteConMismoNombre.isPresent() && !pacienteConMismoNombre.get().getIdPaciente().equals(idPaciente)) {
+                log.error("Ya existe un paciente con el nombre: {}", entity.getNombre());
+                return Either.left(ErrorCodesEnum.RNN005);  // Asumiendo que RNN005 es el código para "nombre duplicado"
+            }
+
             log.info("Se actualizará el paciente con ID {}: Nombre actual: {} y nuevo nombre: {}", idPaciente, pacienteActualizar.getNombre(), entity.getNombre());
             pacienteActualizar.setNombre(entity.getNombre());
             pacienteActualizar.setFecha(entity.getFecha());
-            result = Either.right(pacienteRepository.update(pacienteActualizar));
+            pacienteRepository.update(pacienteActualizar);
+            return Either.right(true);
         } else {
             log.error("No se encontró el paciente con ID: {}", idPaciente);
+            return Either.left(ErrorCodesEnum.RNN002);
         }
-
-        return result;
     }
-
 
 
 
