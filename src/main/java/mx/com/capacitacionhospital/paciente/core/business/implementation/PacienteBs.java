@@ -29,7 +29,7 @@ public class PacienteBs implements PacienteService {
             var pacienteConMismoNombre = pacienteRepository.findByNombre(entity.getNombre());
             if (pacienteConMismoNombre.isPresent() && !pacienteConMismoNombre.get().getIdPaciente().equals(idPaciente)) {
                 log.error("Ya existe un paciente con el nombre: {}", entity.getNombre());
-                return Either.left(ErrorCodesEnum.RNN005);  // Asumiendo que RNN005 es el código para "nombre duplicado"
+                return Either.left(ErrorCodesEnum.RNN005);
             }
 
             log.info("Se actualizará el paciente con ID {}: Nombre actual: {} y nuevo nombre: {}", idPaciente, pacienteActualizar.getNombre(), entity.getNombre());
