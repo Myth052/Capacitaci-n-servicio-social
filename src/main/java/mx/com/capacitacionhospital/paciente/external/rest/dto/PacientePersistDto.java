@@ -35,14 +35,6 @@ public class PacientePersistDto {
     private LocalDateTime fecha;
 
 
-    /* Codigos de error:
-        RNS001: El nombre del paciente es obligatorio.
-        RNS002: El nombre del paciente debe tener entre 1 y 150 caracteres.
-        RNS003: El nombre del paciente solo puede contener letras y espacios.
-        RNS004: La fecha de afiliación no puede ser nula.
-        RNS005: La fecha de afiliación debe ser una fecha pasada o presente.
-     */
-
 
     public Paciente toEntity() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");

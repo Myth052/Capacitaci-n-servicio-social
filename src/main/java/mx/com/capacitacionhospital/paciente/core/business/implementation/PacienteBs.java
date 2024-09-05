@@ -64,10 +64,6 @@ public class PacienteBs implements PacienteService {
     }
 
 
-
-
-
 }
 
 
-//pasar como query param el nombre completo

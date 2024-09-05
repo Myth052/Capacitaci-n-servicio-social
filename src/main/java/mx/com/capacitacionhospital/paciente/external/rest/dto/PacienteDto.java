@@ -49,7 +49,7 @@ public class PacienteDto {
         return PacienteDto.builder()
                 .idPaciente(paciente.getIdPaciente())
                 .nombre(paciente.getNombre() != null ? paciente.getNombre() : "")
-                .fecha(fecha)  // Usamos el campo fecha, ya convertido a LocalDateTime
+                .fecha(fecha)
                 .build();
     }
 }

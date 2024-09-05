@@ -3,6 +3,8 @@ package mx.com.capacitacionhospital.medico.core.entity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
+import java.util.List;
+import mx.com.capacitacionhospital.hospital.core.entity.HospitalMedico;
 
 import java.util.Objects;
 
@@ -16,6 +18,9 @@ public class Medico {
     private String nombre;
     private String primerApellido;
     private String segundoApellido;
+    private String nombreEstado;
+    private List<Integer> hospitalesAsociados;
+
 
     @Override
     public boolean equals(Object o) {
@@ -25,8 +30,4 @@ public class Medico {
         return Objects.equals(idMedico, medico.idMedico);
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(idMedico);
-    }
 }

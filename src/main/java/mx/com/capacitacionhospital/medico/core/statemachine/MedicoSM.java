@@ -1,5 +1,4 @@
-package mx.com.capacitacionhospital.paciente.core.statemachine;
-
+package mx.com.capacitacionhospital.medico.core.statemachine;
 
 import io.quarkus.runtime.Startup;
 import lombok.Getter;
@@ -13,24 +12,26 @@ import javax.inject.Singleton;
 @Startup
 @Singleton
 @Getter
-public class PacienteSM extends CustomStateMachine {
+public class MedicoSM extends CustomStateMachine {
     private final State registrado;
     private final State activo;
     private final State inactivo;
-    private final Action activar;
-    private final Action eliminar;
-    private final Action agendarCita;
     private final Action editar;
+    private final Action eliminar;
+    private final Action consultarHospitales;
+    private final Action inactivar;
+    private final Action activar;
 
-    public PacienteSM() {
-        stateMachine = StateMachineLoader.load("paciente-sm.json").orElseThrow();
-
+    public MedicoSM() {
+        stateMachine = StateMachineLoader.load("medico-sm.json").orElseThrow();
         registrado = stateMachine.getStates().get(0);
         activo = stateMachine.getStates().get(1);
         inactivo = stateMachine.getStates().get(2);
-        activar = stateMachine.getActions().get(0);
+
+        editar = stateMachine.getActions().get(0);
         eliminar = stateMachine.getActions().get(1);
-        agendarCita = stateMachine.getActions().get(2);
-        editar = stateMachine.getActions().get(3);
+        consultarHospitales = stateMachine.getActions().get(2);
+        inactivar = stateMachine.getActions().get(3);
+        activar = stateMachine.getActions().get(4);
     }
 }

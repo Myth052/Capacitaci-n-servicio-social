@@ -4,17 +4,20 @@ public enum ErrorCodesEnum {
     /**
      * Codigos de error de reglas de negocio de sistema
      */
+    /**
     RNS001("Campo Obligatorio"),
     RNS002("Longitud de campo"),
     RNS003 ("Formato de nombre"),
     RNS004("Maquina de estados"),
     RNS005 ("Fecha válida"),
+    */
 
     RNN001("Unicidad de elementos"),
     RNN002("Paciente no encontrado"),
     RNN003("Entrada invalida de datos"),
     RNN004("El paciente tiene una cita"),
     RNN005("Nombre de paciente duplicado"),
+    RNN006("Lista de hospitales no debe estar vacia"),
     ERROR("Error inesperado"),
     /**
      * Errores NO asociados a una regla de negocio

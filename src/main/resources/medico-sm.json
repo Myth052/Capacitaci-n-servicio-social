@@ -1,6 +1,6 @@
 {
-  "id": "Paciente",
-  "name": "paciente",
+  "id": "Medico",
+  "name": "medico",
   "states": [
     {
       "id": 1,
@@ -18,7 +18,7 @@
   "actions": [
     {
       "id": 1,
-      "name": "activar"
+      "name": "editar"
     },
     {
       "id": 2,
@@ -26,14 +26,30 @@
     },
     {
       "id": 3,
-      "name": "agendar cita"
+      "name": "consultar hospitales"
     },
     {
       "id": 4,
-      "name": "editar"
+      "name": "inactivar"
+    },
+    {
+      "id": 5,
+      "name": "activar"
     }
   ],
   "operations": [
+    {
+      "idState": 1,
+      "idAction": 5
+    },
+    {
+      "idState": 3,
+      "idAction": 5
+    },
+    {
+      "idState": 2,
+      "idAction": 1
+    },
     {
       "idState": 1,
       "idAction": 1
@@ -43,19 +59,19 @@
       "idAction": 2
     },
     {
-      "idState": 2,
+      "idState": 1,
       "idAction": 3
     },
     {
       "idState": 2,
-      "idAction": 4
-    },
-    {
-      "idState": 1,
-      "idAction": 4
+      "idAction": 3
     },
     {
       "idState": 3,
+      "idAction": 3
+    },
+    {
+      "idState": 2,
       "idAction": 4
     },
     {
@@ -71,10 +87,6 @@
     {
       "origin": 2,
       "destination": 3
-    },
-    {
-      "origin": 3,
-      "destination": 2
     }
   ]
 }

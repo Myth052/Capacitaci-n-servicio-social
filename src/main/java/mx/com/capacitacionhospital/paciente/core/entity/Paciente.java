@@ -16,9 +16,6 @@ public class Paciente {
     private String fecha;
     private Integer idEstado;
 
-    //private String nombreEstado;
-
-
 
     @Override
     public boolean equals(Object o) {
