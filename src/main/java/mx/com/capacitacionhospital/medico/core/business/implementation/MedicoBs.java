@@ -7,6 +7,7 @@ import mx.com.capacitacionhospital.hospital.core.entity.HospitalMedico;
 import mx.com.capacitacionhospital.medico.core.business.input.MedicoService;
 import mx.com.capacitacionhospital.medico.core.business.output.MedicoRepository;
 import mx.com.capacitacionhospital.medico.core.entity.Medico;
+import mx.com.capacitacionhospital.medico.core.statemachine.MedicoSM;
 import mx.com.capacitacionhospital.util.error.ErrorCodesEnum;
 import mx.com.capacitacionhospital.hospital.external.jpa.repository.HospitalMedicoRepository;
 
@@ -24,17 +25,26 @@ public class MedicoBs implements MedicoService {
     MedicoRepository medicoRepository;
 
     @Inject
-    HospitalMedicoRepository hospitalMedicoRepository;
+    MedicoSM medicoSM;
 
     @Override
     public Either<ErrorCodesEnum, List<Medico>> obtenerMedicosGestion() {
         List<Medico> medicos = medicoRepository.findAll();
+
         if (medicos.isEmpty()) {
             log.error("No se encontraron médicos.");
             return Either.left(ErrorCodesEnum.NOT_FOUND);
         }
+        medicos.forEach(medico -> {
+            var estado = medicoSM.getStateById(medico.getIdEstado());
+            medico.setPuedeEditar(medicoSM.isDoable(medicoSM.getEditar(), estado));
+            medico.setPuedeEliminar(medicoSM.isDoable(medicoSM.getEliminar(), estado));
+            medico.setPuedeConsultarHospitalesAsociados(medicoSM.isDoable(medicoSM.getConsultarHospitales(), estado));
+        });
+
         return Either.right(medicos);
     }
+
 
 
     @Override
@@ -42,7 +52,7 @@ public class MedicoBs implements MedicoService {
         try {
             Optional<Medico> medicoExistente = medicoRepository.findByNombre(medico.getNombre());
             if (medicoExistente.isPresent()) {
-                return Either.left(ErrorCodesEnum.RNN005);
+                return Either.left(ErrorCodesEnum.RNN007);
             }
             medicoRepository.save(medico);
 

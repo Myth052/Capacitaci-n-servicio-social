@@ -69,6 +69,7 @@
 /home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/hospital/core/entity/Paciente.java
 /home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/medico/core/business/input/MedicoService.java
 /home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/paciente/external/jpa/model/PacienteJpa.java
+/home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/hospital/external/jpa/repository/HospitalMedicoRepository.java
 /home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/util/error/PersistenceExceptionMapper.java
 /home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/paciente/external/jpa/model/CitaJpa.java
 /home/myth055/Documentos/Curso_Git/hospital-api/src/main/java/mx/com/capacitacionhospital/paciente/core/entity/Paciente.java

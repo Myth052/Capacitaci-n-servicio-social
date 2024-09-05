@@ -70,6 +70,7 @@ mx/com/capacitacionhospital/paciente/core/business/output/package-info.class
 mx/com/capacitacionhospital/medico/external/jpa/repository/package-info.class
 mx/com/capacitacionhospital/util/error/PersistenceExceptionMapper.class
 mx/com/capacitacionhospital/hospital/external/jpa/model/HospitalMedicoJpa.class
+mx/com/capacitacionhospital/hospital/external/jpa/repository/HospitalMedicoRepository.class
 mx/com/capacitacionhospital/paciente/core/business/implementation/PacienteBs.class
 mx/com/capacitacionhospital/medico/core/statemachine/MedicoSM.class
 mx/com/capacitacionhospital/util/statemachine/Transition.class

@@ -42,6 +42,7 @@ public class MedicoPersistDto {
     private Integer idEstado;
 
 
+
     public Medico toEntity() {
         return Medico.builder()
                 .nombre(nombre)

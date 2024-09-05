@@ -4,7 +4,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 import java.util.List;
-import mx.com.capacitacionhospital.hospital.core.entity.HospitalMedico;
+
 
 import java.util.Objects;
 
@@ -19,6 +19,11 @@ public class Medico {
     private String primerApellido;
     private String segundoApellido;
     private String nombreEstado;
+
+    private Boolean puedeEditar;
+    private Boolean puedeEliminar;
+    private Boolean puedeConsultarHospitalesAsociados;
+
     private List<Integer> hospitalesAsociados;
 
 

@@ -30,26 +30,5 @@ public class PacienteDto {
     @Schema(description = "Fecha de afiliación del paciente", format = "string", implementation = String.class)
     private LocalDateTime fecha;
 
-    public static PacienteDto fromEntity(Paciente paciente) {
-        if (paciente == null) {
-            throw new IllegalArgumentException("Paciente no puede ser null");
-        }
 
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
-
-        LocalDateTime fecha = null;
-        if (paciente.getFecha() != null && !paciente.getFecha().isEmpty()) {
-            try {
-                fecha = LocalDateTime.parse(paciente.getFecha(), formatter);
-            } catch (Exception e) {
-                throw new IllegalArgumentException("Formato de fecha incorrecto: " + paciente.getFecha(), e);
-            }
-        }
-
-        return PacienteDto.builder()
-                .idPaciente(paciente.getIdPaciente())
-                .nombre(paciente.getNombre() != null ? paciente.getNombre() : "")
-                .fecha(fecha)
-                .build();
-    }
 }

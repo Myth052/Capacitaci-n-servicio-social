@@ -18,6 +18,7 @@ public enum ErrorCodesEnum {
     RNN004("El paciente tiene una cita"),
     RNN005("Nombre de paciente duplicado"),
     RNN006("Lista de hospitales no debe estar vacia"),
+    RNN007("Nombre de medico duplicado"),
     ERROR("Error inesperado"),
     /**
      * Errores NO asociados a una regla de negocio

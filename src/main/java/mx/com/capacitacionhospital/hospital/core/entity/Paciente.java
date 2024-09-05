@@ -16,7 +16,6 @@ public class Paciente {
     private String nombre;
     private String fecha;
 
-    //private String nombreEstado;
 
 
 

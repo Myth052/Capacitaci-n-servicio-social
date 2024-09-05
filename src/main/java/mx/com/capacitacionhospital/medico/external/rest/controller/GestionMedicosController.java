@@ -18,6 +18,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Path("/medicos")
 @Produces(MediaType.APPLICATION_JSON)
@@ -36,9 +37,16 @@ public class GestionMedicosController {
     @APIResponse(responseCode = "400", description = "Error en la petición", content = @Content(schema = @Schema(implementation = ErrorResponseDto.class)))
     public Response obtenerMedicosGestion() {
         return medicoService.obtenerMedicosGestion()
-                .map(medicos -> Response.ok(medicos).build())
+                .map(medicos -> {
+                    List<MedicoDto> medicoDtos = medicos.stream()
+                            .map(MedicoDto::fromEntity)
+                            .collect(Collectors.toList());
+                    return Response.ok(medicoDtos).build();
+                })
                 .getOrElseGet(errorCode -> ErrorMapper.errorCodeToResponseBuilder(errorCode).build());
     }
+
+
 
     @POST
     @Path("/registrar")

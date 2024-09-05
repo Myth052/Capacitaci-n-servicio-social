@@ -5,6 +5,7 @@ import lombok.*;
 import mx.com.capacitacionhospital.medico.core.entity.Medico;
 import org.eclipse.microprofile.openapi.annotations.media.Schema;
 
+
 @Getter
 @Setter
 @Builder
@@ -31,29 +32,30 @@ public class MedicoDto {
 
     @JsonProperty
     @Schema(description = "Indica si el médico puede ser editado")
-    private boolean puedeEditar;
+    private Boolean puedeEditar;
 
     @JsonProperty
     @Schema(description = "Indica si el médico puede ser eliminado")
-    private boolean puedeEliminar;
+    private Boolean puedeEliminar;
 
     @JsonProperty
     @Schema(description = "Indica si se pueden consultar los hospitales asociados al médico")
-    private boolean puedeConsultarHospitalesAsociados;
+    private Boolean puedeConsultarHospitalesAsociados;
 
     @JsonProperty
     @Schema(description = "Identificador del estado del médico")
     private Integer idEstado;
 
-    public static MedicoDto fromEntity(Medico medico, boolean puedeEditar, boolean puedeEliminar, boolean puedeConsultarHospitalesAsociados) {
+    public static MedicoDto fromEntity(Medico medico) {
+
         return MedicoDto.builder()
                 .idMedico(medico.getIdMedico())
                 .nombre(medico.getNombre())
                 .primerApellido(medico.getPrimerApellido())
                 .segundoApellido(medico.getSegundoApellido())
-                .puedeEditar(puedeEditar)
-                .puedeEliminar(puedeEliminar)
-                .puedeConsultarHospitalesAsociados(puedeConsultarHospitalesAsociados)
+                .puedeEditar(medico.getPuedeEditar())
+                .puedeEliminar(medico.getPuedeEliminar())
+                .puedeConsultarHospitalesAsociados(medico.getPuedeConsultarHospitalesAsociados())
                 .idEstado(medico.getIdEstado())
                 .build();
     }
